@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Yummy</title>
+  <link rel="shortcut icon" href="images/yummy.png" type="image/x-icon">
+  <link rel="stylesheet" href="css/all.min.css">
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/main.css">
+</head>
+
+<body>
+  <div id="mySidenav" class="sidenav">
+    <div class="sidenav-inner d-flex flex-column justify-content-between p-4">
+        <div class="navlink ">
+            <a class="nav-link fs-5  active" onclick="showSearchInputs();" id="search" aria-current="page" href="#">Search</a>
+            <a class="nav-link fs-5 " onclick="getCategories();" href="#">Category</a>
+            <a class="nav-link fs-5 " onclick="getArea();" href="#">Area</a>
+            <a class="nav-link fs-5 " onclick="fetchIngredients();" href="#">Ingredient</a>
+            <a class="nav-link fs-5 " id="contactus" onclick="showContacts();" href="#">Contact Us</a>
+        </div>
+        <div class="footer ">
+            <i class="fa-brands fa-facebook"></i>
+            <i class="fa-brands fa-twitter"></i>
+            <i class="fa-solid fa-globe"></i>
+            <p class="pt-1" >Copyright Â© 2019 All Rights Reserved.</p>
+        </div>
+    </div>
+    <div class="sidenav-outer d-flex flex-column justify-content-between align-items-center bg-white h-100  p-3" style="width: 65px;">
+        <img src="images/yummy.png" style="width: 50px;" alt="">
+        <button id="toggleBtn" class="bg-white text-black cursor-pointer fs-1 border-0" onclick="toggleNav()">&#9776;</button>
+        <div class="d-flex flex-column text-black">
+            <i class="fa-solid fa-globe d-block cursor-pointer pb-1"></i>
+            <i class="fa-solid fa-share-nodes cursor-pointer"></i>
+        </div>
+    </div>
+</div>
+
+
+  <!--Home Section-->
+
+  <div class="container">
+    <div class="row g-4 py-5" id="mealsContainer">
+
+    </div>
+  </div>
+
+
+
+  <!--Display Meal Details Section-->
+  <div class="container">
+    <div class="row g-4 py-4 d-none" id="rowData">
+
+    </div>
+  </div>
+
+  <div class="loading d-none">
+  <span class="loader"></span>
+  </div>
+
+  <script src="js/jquery.min.js"></script>
+  <script src="js/index.js"></script>
+</body>
+
+</html>
